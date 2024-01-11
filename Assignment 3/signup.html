@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Signup</h2>
+    <a href="index.html"><button type="button">Sign in</button></a>
+    <a href="signup.html"><button type="button">Sign up</button></a>
+
+    <form id="signupForm">
+      <input type="text" id="signupUsername" placeholder=" Username" required>
+      <input type="email" id="signupEmail" placeholder="Enter your mail" required>
+
+      <div class="password-container">
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('signupPassword')"></i>
+      </div>
+
+      <div id="passwordStrength"></div>
+
+      <div class="password-container">
+        <input type="password" id="signupConfirmPassword" placeholder="ConfirmPassword" required>
+        <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('signupConfirmPassword')"></i>
+      </div>
+
+
+      <label for="termsCheckbox" id="termsContainer">
+        <input type="checkbox" id="termsCheckbox" required>
+        Accept Terms & Conditions
+      </label>
+
+      <button type="button" class="button-submit" onclick="signup()">Signup</button>
+    </form>
+
+  </div>
+  <div id="signupMessage"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
